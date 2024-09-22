@@ -8,6 +8,9 @@ def calculate_statistics(df, column_name):
     mean_value = df[column_name].mean(numeric_only=True)
     median_value = df[column_name].median(numeric_only=True)
     std_value = df[column_name].std(numeric_only=True)
+    mean_value = round(mean_value, 3)
+    median_value = round(median_value, 3)
+    std_value = round(std_value, 3)
 
     print(f"{column_name} Statistics:\n")
     print(f"Mean: {mean_value}")
