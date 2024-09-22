@@ -1,20 +1,15 @@
 setup:
 	pip install -r requirements.txt
 
-
 lint:
-	pylint --disable=R,C,locally-disabled --ignore-patterns=test_.*?py *.py
+	ruff check .
 
 format:	
 	black *.py 
 
 
 test:
-	pytest 
-
-
-dev:
-	docker-compose up --build
+	pytest test_script.py test_lib.py
 
 
 clean:
