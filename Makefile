@@ -9,6 +9,7 @@ format:
 
 
 test:
+	pytest --nbval main.ipynb
 	pytest test_script.py test_lib.py
 
 
